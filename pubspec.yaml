@@ -1,0 +1,46 @@
+name: washaa
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  iconsax: ^0.0.8
+  cupertino_icons: ^1.0.6
+  flutter_native_splash: ^2.3.13
+  smooth_page_indicator: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: 0.13.1 # Add flutter_launcher_icons here
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logos/Group 1.png
+    - assets/images/5.png
+    - assets/images/4.png
+    - assets/images/3.png
+
+flutter_native_splash:
+  color: "#0F73C5"
+  image: assets/logos/Group 1.png
+  android_12:
+    image: assets/logos/Group 1.png
+    color: "#086FC4"
+    android: false
+    ios: false
+    web: false
+
+flutter_icons: # Add flutter_icons configuration here
+  android: true # Generate Android icons
+  ios: true # Generate iOS icons
+  image_path: "assets/logos/Group 1.png" # Path to the icon image file
