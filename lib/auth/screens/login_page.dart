@@ -36,7 +36,7 @@ class LoginPage extends StatelessWidget {
                       FadeInUp(
                           duration: Duration(milliseconds: 1000),
                           child: Text(
-                            "Login",
+                            "my first pull",
                             style: TextStyle(
                                 fontSize: 30, fontWeight: FontWeight.bold),
                           )),

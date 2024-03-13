@@ -132,7 +132,7 @@ class _SignupPageState extends State<SignupPage> {
                         text: TextSpan(
                           children: [
                             TextSpan(
-                              text: 'I agree to the ',
+                              text: 'I Agree to the ',
                               style: TextStyle(color: Colors.black),
                             ),
                             TextSpan(
