@@ -10,7 +10,7 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
-  bool _agreedToTerms = false;
+  bool _agreedToTerms = false; 
 
   void _setAgreedToTerms(bool newValue) {
     setState(() {
@@ -168,7 +168,7 @@ class _SignupPageState extends State<SignupPage> {
                   child: MaterialButton(
                     minWidth: double.infinity,
                     height: 60,
-                    onPressed: () {},
+                    onPressed: () {Navigator.push(context, 'Route' as Route<Object?>);},
                     color: Color.fromARGB(255, 81, 160, 235),
                     elevation: 0,
                     shape: RoundedRectangleBorder(
