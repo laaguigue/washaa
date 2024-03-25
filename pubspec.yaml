@@ -34,6 +34,7 @@ flutter:
     - assets/fonts/Discover.png
     - assets/fonts/Effortl.png
     - assets/fonts/welcom.png
+    - assets/icons/Group 18.png
 
 flutter_native_splash:
   color: "#0F73C5"
