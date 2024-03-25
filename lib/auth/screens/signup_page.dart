@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
-import 'package:washaa/auth/screens/login_page.dart';
+import 'package:washaa/auth/controllers/Email_verification.dart';
 
 class SignupPage extends StatefulWidget {
   SignupPage(
@@ -173,8 +173,7 @@ class _SignupPageState extends State<SignupPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                LoginPage()), // Replace 'LoginPage()' with your login page widget
+                            builder: (context) => Email_verification()),
                       );
                     },
                     color: Color.fromARGB(255, 81, 160, 235),
