@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:washaa/auth/screens/Emailverf_popup.dart';
 
 void main() {
   runApp(Email_verification());
@@ -62,7 +63,10 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Implement verification logic
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Emailverf_popup()),
+                );
               },
               child: Text('Verify', style: TextStyle(color: Colors.black)),
               style: ElevatedButton.styleFrom(
