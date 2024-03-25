@@ -36,7 +36,7 @@ class LoginPage extends StatelessWidget {
                       FadeInUp(
                           duration: Duration(milliseconds: 1000),
                           child: Text(
-                            "my first pull",
+                            "Wellcome again",
                             style: TextStyle(
                                 fontSize: 30, fontWeight: FontWeight.bold),
                           )),
@@ -84,7 +84,7 @@ class LoginPage extends StatelessWidget {
                             minWidth: double.infinity,
                             height: 60,
                             onPressed: () {},
-                            color: Colors.greenAccent,
+                            color: Color.fromARGB(255, 100, 151, 222),
                             elevation: 0,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50)),

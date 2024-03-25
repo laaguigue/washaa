@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:washaa/auth/screens/login_page.dart';
 
 class SignupPage extends StatefulWidget {
   SignupPage(
@@ -10,7 +11,7 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
-  bool _agreedToTerms = false; 
+  bool _agreedToTerms = false;
 
   void _setAgreedToTerms(bool newValue) {
     setState(() {
@@ -168,7 +169,14 @@ class _SignupPageState extends State<SignupPage> {
                   child: MaterialButton(
                     minWidth: double.infinity,
                     height: 60,
-                    onPressed: () {Navigator.push(context, 'Route' as Route<Object?>);},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                LoginPage()), // Replace 'LoginPage()' with your login page widget
+                      );
+                    },
                     color: Color.fromARGB(255, 81, 160, 235),
                     elevation: 0,
                     shape: RoundedRectangleBorder(
