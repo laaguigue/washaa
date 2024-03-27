@@ -1,24 +1,44 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
+  @override
+  _ProfilePageState createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  File? _image;
+
+  Future<void> _pickImage() async {
+    try {
+      final pickedFile =
+          await ImagePicker().pickImage(source: ImageSource.gallery);
+      if (pickedFile != null) {
+        setState(() {
+          _image = File(pickedFile.path);
+        });
+      }
+    } catch (e) {
+      print('hade lcode makhadamach khouya : $e');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(
-          color: Colors.black, // adjust the color to match your design
+          color: Colors.black,
         ),
-        backgroundColor: Colors.white, // Color for AppBar
-        elevation: 0, // Remove shadow
+        backgroundColor: Colors.white,
+        elevation: 0,
         actions: [
           TextButton(
-            onPressed: () {
-              // Define the action for the skip button
-            },
+            onPressed: () {},
             child: Text(
               'Skip',
-              style: TextStyle(
-                  color: Colors.blue), // adjust the color to match your design
+              style: TextStyle(color: Colors.blue),
             ),
           ),
         ],
@@ -30,24 +50,29 @@ class ProfilePage extends StatelessWidget {
           children: <Widget>[
             Text(
               'Hello Ayoub laaguigue!',
-              style: TextStyle(
-                  fontSize: 24.0), // adjust the styling to match your design
+              style: TextStyle(fontSize: 24.0),
             ),
             Text(
               'Tell us more about you..',
-              style: TextStyle(
-                  fontSize: 16.0), // adjust the styling to match your design
+              style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(height: 24.0),
             CircleAvatar(
-              radius: 40, // adjust the size to match your design
+              radius: 40,
               backgroundColor: Colors.grey.shade300,
-              child: IconButton(
-                icon: Icon(Icons.add),
-                onPressed: () {
-                  // Define the action for the add profile picture button
-                },
-              ),
+              child: _image == null
+                  ? IconButton(
+                      icon: Icon(Icons.person_add),
+                      onPressed: _pickImage,
+                    )
+                  : ClipOval(
+                      child: Image.file(
+                        _image!,
+                        width: 80,
+                        height: 80,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
             ),
             SizedBox(height: 24.0),
             TextField(
@@ -72,7 +97,7 @@ class ProfilePage extends StatelessWidget {
                     OutlineInputBorder(), // Adds a border around the TextField
                 labelText: 'Phone number',
                 hintText: 'Phone number',
-                prefixText: '+212 ', // adjust the prefix as needed
+                prefixText: '+212   ', // adjust the prefix as needed
                 labelStyle: TextStyle(
                   fontSize: 16.0, // Adjusts the font size of the label
                   color: Colors.grey[800], // Changes the label text color
@@ -102,13 +127,19 @@ class ProfilePage extends StatelessWidget {
             SizedBox(height: 24.0),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50)),
                 foregroundColor: Colors.white,
-                backgroundColor: Colors.blue, // foreground (text) color
+                backgroundColor: Colors.blue,
               ),
-              onPressed: () {
-                // Define what happens when the button is pressed
-              },
-              child: Text('Continue'),
+              onPressed: () {},
+              child: Text(
+                'Continue',
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18,
+                    color: Colors.white),
+              ),
             ),
           ],
         ),

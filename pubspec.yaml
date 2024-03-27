@@ -18,11 +18,14 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   shared_preferences: ^2.2.2 #the shared_preferences made in my case to just show the onbording screens anly one time.
   animate_do: ^3.3.4
+  image_picker: ^1.0.7
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: 0.13.1 # Add flutter_launcher_icons here
+  
+  
 
 flutter:
   uses-material-design: true
