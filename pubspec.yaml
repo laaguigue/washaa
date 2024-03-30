@@ -38,6 +38,7 @@ flutter:
     - assets/fonts/Effortl.png
     - assets/fonts/welcom.png
     - assets/icons/Group 18.png
+    - assets/icons/card.png
 
 flutter_native_splash:
   color: "#0F73C5"

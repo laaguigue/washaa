@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:washaa/auth/screens/profil_popup.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -132,7 +133,12 @@ class _ProfilePageState extends State<ProfilePage> {
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.blue,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => profil_popup()),
+                );
+              },
               child: Text(
                 'Continue',
                 style: TextStyle(
