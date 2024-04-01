@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "665832180742",
+    "project_id": "wshaaa",
+    "storage_bucket": "wshaaa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:665832180742:android:314932ac26dedc7108c787",
+        "android_client_info": {
+          "package_name": "com.example.washaa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFF1pq6KRHQEYxuiNKsW4zOB-bjSFuSJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
