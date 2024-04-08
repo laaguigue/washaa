@@ -1,26 +1,25 @@
-buildscript{
-    repositories{
-        google()
-        jcenter()
+buildscript {
+    repositories {
+        google() // Google's Maven repository
+        jcenter() // JCenter repository
     }
-}
-dependencies{
-    classpath 'com.google.gms.google-services:4.4.1'
+    dependencies {
+        // Google Services plugin
+        classpath 'com.google.gms:google-services:4.4.1'
+    }
 }
 
 allprojects {
     repositories {
-        google()
-        mavenCentral()
+        google() // Google's Maven repository
+        mavenCentral() // Maven Central repository
     }
 }
-
 
 rootProject.buildDir = '../build'
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
+    
     project.evaluationDependsOn(':app')
 }
 
