@@ -84,7 +84,7 @@ class LoginPage extends StatelessWidget {
                             minWidth: double.infinity,
                             height: 60,
                             onPressed: () {},
-                            color: Color.fromARGB(255, 100, 151, 222),
+                            color: Color.fromARGB(255, 100, 151, 222), //
                             elevation: 0,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50)),
