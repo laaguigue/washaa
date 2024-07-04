@@ -159,7 +159,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     );
                   },
                   child: Text(
-                    'Continue',
+                    'Continue', // the first thing in life is to understand the line of your life you should do this ?
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
