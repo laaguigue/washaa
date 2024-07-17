@@ -75,7 +75,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
             ),
             SizedBox(height: 20.0),
             Text(
-              '00:34',
+              '12:20',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16.0),
             ),
