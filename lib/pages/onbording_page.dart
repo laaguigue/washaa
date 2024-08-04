@@ -70,13 +70,13 @@ class _OnbordingPageState extends State<OnbordingPage> {
               children: [
                 ElevatedButton(
                   style: ButtonStyle(
-                      minimumSize: MaterialStateProperty.all<Size>(
+                      minimumSize: WidgetStateProperty.all<Size>(
                           Size(150, 40)), // minWidth and height
-                      backgroundColor: MaterialStateProperty.all<Color>(
+                      backgroundColor: WidgetStateProperty.all<Color>(
                           Color(0xFF1692FC)), // Button color
-                      foregroundColor: MaterialStateProperty.all<Color>(
+                      foregroundColor: WidgetStateProperty.all<Color>(
                           Colors.white), // Text color
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(13.0),
                       ))),
@@ -88,13 +88,12 @@ class _OnbordingPageState extends State<OnbordingPage> {
                 SizedBox(width: 10),
                 ElevatedButton(
                   style: ButtonStyle(
-                      minimumSize:
-                          MaterialStateProperty.all<Size>(Size(150, 40)),
-                      backgroundColor: MaterialStateProperty.all<Color>(
+                      minimumSize: WidgetStateProperty.all<Size>(Size(150, 40)),
+                      backgroundColor: WidgetStateProperty.all<Color>(
                           Color(0xFFDAEEFC)), // Button color
-                      foregroundColor: MaterialStateProperty.all<Color>(
+                      foregroundColor: WidgetStateProperty.all<Color>(
                           Color(0xFF1692FC)), // Text color
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(13.0),
                               side: BorderSide(
