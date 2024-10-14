@@ -101,7 +101,7 @@ class _ProfilePageState extends State<ProfilePage> {
               CircleAvatar(
                 radius:
                     screenHeight * 0.06, // Responsive based on screen height
-                backgroundColor: Colors.grey.shade300,
+                backgroundColor: const Color.fromARGB(255, 255, 255, 255),
                 child: _image == null
                     ? IconButton(
                         icon: Icon(Icons.person_add),
@@ -159,7 +159,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     );
                   },
                   child: Text(
-                    'Continue', // the first thing in life is to understand the line of your life you should do this ?
+                    'Continue', // command line.
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
